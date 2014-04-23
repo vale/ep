@@ -1,0 +1,30 @@
+f1(x)=a+b*x
+f2(x)=c+d*x
+f3(x)=e+f*x
+f4(x)=g+h*x
+f5(x)=i+j*x
+set xrange [0:1000]
+
+fit f1(x) "./aufgabe1a1-1" using 2:3 via a,b
+fit f2(x) "./aufgabe1a1-2" using 2:3 via c,d
+fit f3(x) "./aufgabe1a1-3" using 2:3 via e,f
+
+set term png
+set output "aufgabe1a1-fit"
+
+plot "./aufgabe1a1-1" using 2:3 lt 1 title "Messpunkte", f1(x), f2(x), "./aufgabe1a1-2" using 2:3 lt 1 title "", f3(x), "./aufgabe1a1-3" using 2:3 lt 1 title ""
+
+set output "aufgabe1a1-nofit"
+
+plot "./aufgabe1a1-1" using 2:3 lt 1 title "Messpunkte", "./aufgabe1a1-2" using 2:3 lt 1 title "", "./aufgabe1a1-3" using 2:3 lt 1 title ""
+
+set xrange [0:500] reverse
+set output "aufgabe1a2-fit"
+
+fit f4(x) "./aufgabe1a2-1" via g,h
+fit f5(x) "./aufgabe1a2-2" via i,j
+
+plot "./aufgabe1a2-1" lt 1 title "Messpunkte", "./aufgabe1a2-2" lt 1 title "", f5(x), f4(x)
+
+set output "aufgabe1a2-nofit"
+plot "./aufgabe1a2-1" lt 1 title "Messpunkte", "./aufgabe1a2-2" lt 1 title ""
