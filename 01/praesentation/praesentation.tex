@@ -134,9 +134,39 @@ P_2 = I_2^2 \cdot R_2 = 0.004 W
 \end{equation}
 \end{frame}
 
-\subsection*{Masse $m_1$ -- Messung und Simulation}
 \begin{frame}
-%\includegraphics[width=\textwidth]{images/4/phi1uebert}
+\subsection{Schaltung 2}
+$R_{ges} = 500 \Omega$ \\ Mit $U_{ges,genmessen} = 0.843 V$ und $I_{ges,gemessen} = 1.7 mA$ ergibt sich: 
+\begin{equation}
+R_{ges} = \frac{U_{ges}}{I_{ges}} = 495.9 \Omega
+\end{equation}
+\begin{equation}
+R_{1,gem} = 989 \Omega 
+\end{equation}
+\begin{equation}
+R_{2,gem} = 992 \Omega
+\end{equation}
+\begin{equation}
+\Rightarrow R_{ges,gem} = \frac{R_{1,gem} \cdot R_{2,gem}}{R_{1,gem} + R_{2,gem}} = 495.25 \Omega
+\end{equation}
+\end{frame}
+\begin{frame}
+\subsection{Schaltung 3}
+$R_{ges} = 9.4 M \Omega$, $I_{ges,gem} = 2.14 \mu A$, $U_{ges,gem} = 2.006 V$
+Es ergibt sich:
+\begin{equation}
+R_1 = \frac{U_1}{I} = 3802336.5 \Omega
+\end{equation}
+\begin{equation}
+R_2 = 3779906.5 \Omega
+\end{equation}
+Gemessene Widerstände sind zu klein, da der tatsächliche Widerstand des Stromkreises im Verhältnis zum Innenwiderstand des DMM zu groß ist, d.h. es fällt zu viel Spannung am DMM ab. Mit dem Modus "HI-Z" wird der Innenwiderstand auf 10 G$\Omega$ erhöht und es ergibt sich:
+\begin{equation}
+R_1^{(HI-Z)} = \frac{U_1^{(HI-Z)}}{I} = \frac{10.033 V}{I}= 4688317.8 \Omega
+\end{equation}
+\begin{equation}
+R_2^{(HI-Z)} = \frac{9.937 V}{I}=4660280 \Omega
+\end{equation}
 \end{frame}
 
 \subsection*{Masse $m_1$ -- Phasenraumdiagramm}
