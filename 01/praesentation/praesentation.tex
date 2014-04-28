@@ -1,0 +1,109 @@
+\documentclass[compress,11pt]{beamer}
+%\includeonly{pendel}
+\usetheme{Ilmenau}
+%\usetheme{fau-4-3}
+%\usecolortheme{beaver}
+%\beamertemplatenavigationsymbolsempty
+\usepackage[ngerman]{babel}
+\usepackage{marvosym}
+\usepackage{multimedia}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{esvect}
+%\author{}
+\title{EP Gruppe 8}
+%\setbeamercovered{transparent}
+%\setbeamertemplate{navigation symbols}{}
+%\logo{}
+%\institute{}
+%\date{}
+%\subject{}
+\usepackage{verbatim}
+\begin{document}
+
+\frame[c]{\titlepage}
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+\section{Aufgabe 1}
+\subsection{a)}
+\begin{frame}{Innenwiderstand}
+\centering
+\includegraphics[width=.4\textwidth]{images/4/double-pendulum}%Schaltbild
+\end{frame}
+
+\begin{frame}
+Tabellen Widerstände U|I|R
+\end{frame}
+
+\begin{frame}
+%Messpunkte ohne Fit
+%\includegraphics[width=\textwidth]{images/4/double-pendulum}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{Was fällt auf?}
+\begin{itemize}
+\item Klicken im Messgerät an gleichen Stellen, wie Änderung des Innenwiderstands
+\item 
+\end{itemize}
+Innenwiderstand des Messgeräts ändert sich, um größere Messbereiche abdecken zu können.
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+Ein großer Strom fliest nur dann, wenn der Widerstand des Schaltkreises gering ist. Ein großer Messwiderstand hätte daher einen zu großen Anteil am Gesamtwiderstand.\\
+Damit auch bei kleinen Strömen eine messbare Spannung abfällt, muss der Shunt-Widerstand entsprechend vergrößert werden.
+\end{frame}
+
+
+\begin{frame}
+\movie[showcontrols=false, autostart]{\includegraphics[width=\textwidth]{movies/6006_1}}{movies/output.mov}
+\end{frame}
+
+\begin{frame}
+\includegraphics[width=\textwidth]{images/4/tracker}
+\end{frame}
+
+\subsection{Auswertung}
+\begin{frame}
+\begin{columns}
+\column{0.5\textwidth}
+\includegraphics[width=\textwidth]{images/4/pendel-3}\\
+\includegraphics[width=\textwidth]{images/4/pendel-7}
+\column{0.5\textwidth}
+\includegraphics[width=\textwidth]{images/4/pendel-8}\\
+\includegraphics[width=\textwidth]{images/4/pendel-9}
+\end{columns}
+\end{frame}
+
+\subsection*{Masse $m_1$ -- Messung und Simulation}
+\begin{frame}
+\includegraphics[width=\textwidth]{images/4/phi1uebert}
+\end{frame}
+
+\subsection*{Masse $m_1$ -- Phasenraumdiagramm}
+\begin{frame}
+\includegraphics[width=\textwidth]{images/4/ph1_ueberphi1}
+\end{frame}
+
+\subsection*{Masse $m_2$ -- Messung und Simulation}
+\begin{frame}
+\includegraphics[width=\textwidth]{images/4/phi2uebert}
+\end{frame}
+
+\subsection*{Masse $m_2$ -- Phasenraumdiagramm}
+\begin{frame}
+\includegraphics[width=\textwidth]{images/4/phi2_ueberphi2}
+\end{frame}
+
+\begin{frame}
+\movie[showcontrols=false, autostart]{\includegraphics[width=\textwidth]{movies/show.jpg}}{movies/show.mov}
+\end{frame}
+\end{document}
