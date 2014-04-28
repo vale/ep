@@ -8,6 +8,7 @@ function mittelwert_stand(ST,spalte)
 	A=load(ST);
 	x = A(:,spalte);
 	n = length(x);
+	mi = mean(x);
 	mi = 0;
 	for k=1:n
 		mit = mi + x(k);
@@ -25,4 +26,5 @@ function mittelwert_stand(ST,spalte)
 	fehler = sigma/sqrt(n)
 	minimum = min(x)
 	maximum = max(x)
+	mitt = mean(x)
 end
