@@ -11,6 +11,8 @@ fit f3(x) "./aufgabe1a1-3" using 2:3 via e,f
 
 set term png
 set output "aufgabe1a1-fit"
+set xlabel "U in mV"
+set ylabel "I in mA"
 
 plot "./aufgabe1a1-1" using 2:3 lt 1 title "Messpunkte", f1(x), f2(x), "./aufgabe1a1-2" using 2:3 lt 1 title "", f3(x), "./aufgabe1a1-3" using 2:3 lt 1 title ""
 
