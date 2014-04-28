@@ -89,16 +89,49 @@ IntegrationszeitMittelwert & Mittel & Standardabweichung & Minimum & Maximum \\
 %\includegraphics[width=\textwidth]{images/4/tracker}
 \end{frame}
 
-\subsection{Auswertung}
+\section{Aufgabe 2}
 \begin{frame}
-\begin{columns}
-\column{0.5\textwidth}
-%\includegraphics[width=\textwidth]{images/4/pendel-3}\\
-%\includegraphics[width=\textwidth]{images/4/pendel-7}
-\column{0.5\textwidth}
-%\includegraphics[width=\textwidth]{images/4/pendel-8}\\
-%\includegraphics[width=\textwidth]{images/4/pendel-9}
-\end{columns}
+\subsection{Schaltung 1}
+\subsubsection{Widerstände}
+
+Alle Werte sind in $\Omega$ angegeben. Für die berechneten Widerstände wurden die an den jeweiligen Stromstärken verwendet.\\
+\begin{tabular}{|c|c|c|c|}
+\hline 
+- & Erwarteter Widerstand & Berechneter " & Gemessener " \\ 
+\hline 
+$R_{ges}$  & 97916.7 & 100000 & 96586.7 \\ 
+\hline 
+$R_1$ & 4700000 & 4652790.7 & 4640000 \\ 
+\hline
+$R_2$ & 100000 & 100035 & 98640 \\
+\hline
+\end{tabular}
+
+\subsection{Stromstärken an den Widerständen}
+Erhält man über den folgenden Ansatz:
+\begin{equation}
+U = const. = I_1 \cdot R_1 = I_2 \cdot R_2
+\end{equation}
+\begin{equation}
+\Rightarrow \frac{I_1}{I_2} = \frac{R_2}{R_1} = \frac{1 k\Omega}{4.7 M\Omega} = \frac{1}{47}
+\end{equation}
+\begin{equation}
+I_{ges} = I_1 + I_2 = \frac{I_2}{47} + I_2
+\end{equation}
+\begin{equation}
+\Rightarrow I_2 = \frac{47}{48} \cdot I_{ges} = \frac{47}{48} \cdot 0.2 mA = 1.9583 e-4
+\end{equation}
+\begin{equation}
+I_1 = I_{ges} - I_2 = 4.167 \mu A
+\end{equation}
+Werte stimmen bis auf kleine Ungenauigkeiten mit den gemessenen Werten überein.
+\subsection{Leistung an den Widerständen}
+\begin{equation}
+P_1 = I_1^2 \cdot R_1 = 8.16 e-5 W
+\end{equation}
+\begin{equation}
+P_2 = I_2^2 \cdot R_2 = 0.004 W
+\end{equation}
 \end{frame}
 
 \subsection*{Masse $m_1$ -- Messung und Simulation}
