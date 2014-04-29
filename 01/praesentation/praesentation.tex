@@ -32,8 +32,9 @@
 \section{Aufgabe 1}
 \subsection{a)}
 \begin{frame}{Innenwiderstand}
-\centering
-\includegraphics[width=.4\textwidth]{images/4/double-pendulum}%Schaltbild
+\begin{block}{Shuntwiderstand im DMM}
+\includegraphics[width=\textwidth]{images/1a.png} %Schaltbild
+\end{block}
 \end{frame}
 
 \begin{frame}
@@ -169,22 +170,16 @@ R_2^{(HI-Z)} = \frac{9.937 V}{I}=4660280 \Omega
 \end{equation}
 \end{frame}
 
-\subsection*{Masse $m_1$ -- Phasenraumdiagramm}
+\section{Aufgabe 3}
+\subsection{Widerstand $1k\Omega$}
 \begin{frame}
-%\includegraphics[width=\textwidth]{images/4/ph1_ueberphi1}
-\end{frame}
-
-\subsection*{Masse $m_2$ -- Messung und Simulation}
-\begin{frame}
-%\includegraphics[width=\textwidth]{images/4/phi2uebert}
-\end{frame}
-
-\subsection*{Masse $m_2$ -- Phasenraumdiagramm}
-\begin{frame}
-%\includegraphics[width=\textwidth]{images/4/phi2_ueberphi2}
+Widerstand bei $100Hz$
+\includegraphics[width=\textwidth]{images/scope_5}
+die Steigung der Geraden lässt auf einen Widerstand von $1k\Omega$ schließen
 \end{frame}
 
 \begin{frame}
-%\movie[showcontrols=false, autostart]{\includegraphics[width=\textwidth]{movies/show.jpg}}{movies/show.mov}
+Der Effekt, der nicht linearen Kennlinie bei einem einfachen Widerstand lässt sich durch die Verbindung von Generator und Oszilloskop über die Erde erklären.
+\includegraphics[width=\textwidth]{images/3-erde.png}
 \end{frame}
 \end{document}
