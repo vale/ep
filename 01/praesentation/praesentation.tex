@@ -65,23 +65,24 @@ Damit auch bei kleinen Strömen eine messbare Spannung abfällt, muss der Shunt-
 
 
 \begin{frame}
+\tiny
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
-IntegrationszeitMittelwert & Mittel & Standardabweichung & Minimum & Maximum \\ 
+Integrationszeit & Mittel & Standardabweichung & Minimum & Maximum \\ 
 \hline 
-• & -1.205800000000000e-04 & 1.612119649990745e-06 & -1.280000000000000e-04 & -1.150000000000000e-04 \\ 
+• & -1.2058e-04 & 1.61212e-06 & -1.2800e-04 & -1.1500e-04 \\ 
 \hline 
-• & -0.001326910000000 & 7.561088050562645e-05 & -0.001404000000000 & -1.850000000000000e-04 \\ 
+• & -0.00133 & 7.56109e-05 & -0.00141 & -1.85000e-04 \\ 
 \hline 
-• & -0.007228985336667 & 0.011961495895749 & -0.027426000000000 & 0.014268000000000 \\ 
+• & -0.0072289 & 0.011962 & -0.027426 & 0.014268 \\ 
 \hline 
-• &  -0.013617053333333 & 0.012538989757190 &  -0.036758000000000 & 0.009862000000000 \\ 
+• &  -0.013617 & 0.012539 &  -0.036758 & 0.009862 \\ 
 \hline 
-• & -0.017347804271100 & 0.012955625955849 & -0.041245000000000 &  0.006758000000000 \\ 
+• & -0.01734781 & 0.0129556 & -0.041245 &  0.006758 \\ 
 \hline 
-• & -0.016173373974533 & 0.012837624964948 & -0.040475000000000 & 0.008057000000000 \\ 
+• & -0.0161734 & 0.012837 & -0.040475 & 0.008057 \\ 
 \hline 
-• & -9.605146482333332e-04 & 0.002075512735832 & -0.004252000000000 & 0.002389000000000 \\ 
+• & -9.6051465e-04 & 0.002076 & -0.004252 & 0.0023890 \\ 
 \hline 
 \end{tabular} 
 \end{frame}
@@ -91,8 +92,12 @@ IntegrationszeitMittelwert & Mittel & Standardabweichung & Minimum & Maximum \\
 \end{frame}
 
 \section{Aufgabe 2}
-\begin{frame}
+
 \subsection{Schaltung 1}
+\begin{frame}
+\includegraphics[width=\textwidth]{images/21.png}
+\end{frame}
+\begin{frame}
 \subsubsection{Widerstände}
 
 Alle Werte sind in $\Omega$ angegeben. Für die berechneten Widerstände wurden die an den jeweiligen Stromstärken verwendet.\\
@@ -108,7 +113,7 @@ $R_2$ & 100000 & 100035 & 98640 \\
 \hline
 \end{tabular}
 
-\subsection{Stromstärken an den Widerständen}
+\subsubsection{Stromstärken an den Widerständen}
 Erhält man über den folgenden Ansatz:
 \begin{equation}
 U = const. = I_1 \cdot R_1 = I_2 \cdot R_2
@@ -126,7 +131,7 @@ I_{ges} = I_1 + I_2 = \frac{I_2}{47} + I_2
 I_1 = I_{ges} - I_2 = 4.167 \mu A
 \end{equation}
 Werte stimmen bis auf kleine Ungenauigkeiten mit den gemessenen Werten überein.
-\subsection{Leistung an den Widerständen}
+\subsubsection{Leistung an den Widerständen}
 \begin{equation}
 P_1 = I_1^2 \cdot R_1 = 8.16 e-5 W
 \end{equation}
@@ -135,8 +140,11 @@ P_2 = I_2^2 \cdot R_2 = 0.004 W
 \end{equation}
 \end{frame}
 
-\begin{frame}
 \subsection{Schaltung 2}
+\begin{frame}
+\includegraphics[width=\textwidth]{images/22.png}
+\end{frame}
+\begin{frame}
 $R_{ges} = 500 \Omega$ \\ Mit $U_{ges,genmessen} = 0.843 V$ und $I_{ges,gemessen} = 1.7 mA$ ergibt sich: 
 \begin{equation}
 R_{ges} = \frac{U_{ges}}{I_{ges}} = 495.9 \Omega
@@ -151,8 +159,12 @@ R_{2,gem} = 992 \Omega
 \Rightarrow R_{ges,gem} = \frac{R_{1,gem} \cdot R_{2,gem}}{R_{1,gem} + R_{2,gem}} = 495.25 \Omega
 \end{equation}
 \end{frame}
-\begin{frame}
+
 \subsection{Schaltung 3}
+\begin{frame}
+\includegraphics[width=\textwidth]{images/23.png}
+\end{frame}
+\begin{frame}
 $R_{ges} = 9.4 M \Omega$, $I_{ges,gem} = 2.14 \mu A$, $U_{ges,gem} = 2.006 V$
 Es ergibt sich:
 \begin{equation}
@@ -212,7 +224,7 @@ Phase: $U(t=0) \approx 0.09 V$\
 \subsection{Eigenschaften des Signals}
 Amplitude: $U_0 = 2.35625 V$ \\
 Frequenz: $f = 59.172 kHz$ \\
-Offset: $U_{off} \approx 0.1 V$
+Offset: $U_{off} \approx 0.1 V$ \\
 Phase: $U(t=0) \approx 0.09 V$\
 \end{frame}
 \end{document}
