@@ -45,6 +45,23 @@
 \newcommand{\C}{\mathbb{C}}
 \begin{document}
 \section{Aufgabe 3}
+Gegebene Schaltung:\\
+\includegraphics[width=\textwidth]{../daten/Messdaten/plots/schalt_tief2}
+Gemessene3 Sprungreaktion:\\
+\includegraphics[width=\textwidth]{../daten/scope_25}
 
-
+Gesucht: Zeitkonstante $\tau = R \cdot C$\\
+Sprungreaktion ist in diesem Fall der Entladevorgang des Kondensators, gegeben durch:
+\begin{equation}
+U(t) = U_0 * \exp(-\frac{t}{\tau}),  \tau = \frac{1}{R\cdot C}
+\end{equation}
+Strategie: Setze $t=\tau$ $\Rightarrow  U(\tau) = U_0 \cdot \exp(-1)$
+und suche den Wert $\frac{U(t)}{U_0} = \frac{1}{e}$ in der Messtabelle:
+\begin{equation}
+t \approx 0.045 s
+\end{equation}
+Errechneter Wert:
+\begin{equation}
+\tau = R \cdot C = 10^{-7} \cdot 10^{3} = 10^{-4}
+\end{equation}
 \end{document}
