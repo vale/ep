@@ -1,4 +1,4 @@
-Frequenz (Hz)	Gain (dB)	Gain (U_out/U_in)	Phase
+#Frequenz (Hz)	Gain (dB)	Gain (U_out/U_in)	Phase
 100.000000	-0.054020	0.993800	-2.800000
 109.647820	-0.054020	0.993800	-4.500000
 120.226443	-0.054020	0.993800	-5.000000
