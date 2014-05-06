@@ -6,16 +6,30 @@ set ylabel "ln(U_aus/U_ein) in dB"
 
 set output "Aufgabe2Bodediagramm_tief_gain.png"
 plot "../Aufgabe2Bodediagramm_tief.txt" using 1:2
-#set output "Aufgabe2Bodediagramm_tief_gain_lines.png"
 set output "Aufgabe2Bodediagramm_hochpass_gain.png"
 plot "../Aufgabe2Bodediagramm_hochpass.txt" using 1:2
 
-set output "Aufgabe4Bodediagramm_tief_gain.png"
+set output "Aufgabe4Bodediagramm_tief_gain_lin.png"
 plot "../Aufgabe4bodediagrammtiefpass.txt" using 1:2 w lines
+
+set output "Aufgabe4Bodediagramm_tief_gain.png"
+plot "../Aufgabe4bodediagrammtiefpass.txt" using 1:2 
 
 set output "Aufgabe4Bodediagramm_tief_R_gain.png"
 set yrange [-70:1]
+plot "../Aufgabe4bodediagrammtiefpassmitR.txt" using 1:2 
+
+set output "Aufgabe4Bodediagramm_tief_R_gain_lin.png"
+set yrange [-70:1]
 plot "../Aufgabe4bodediagrammtiefpassmitR.txt" using 1:2 w lines
+
+unset yrange
+set output "Aufgabe4bschaltung2.png"
+plot "../Aufgabe4bschaltung2.txt" using 1:2
+
+set output "Aufgabe4bschaltung2_lin.png"
+plot "../Aufgabe4bschaltung2.txt" using 1:2 w lines
+
 
 set ylabel "Phase"
 
