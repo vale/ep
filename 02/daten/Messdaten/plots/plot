@@ -1,43 +1,47 @@
 set term png
+unset key
 set logscale x
 set xlabel "ln(f), fin Hz"
 
 set ylabel "ln(U_aus/U_ein) in dB"
 
 set output "Aufgabe2Bodediagramm_tief_gain.png"
-plot title "" "../Aufgabe2Bodediagramm_tief.txt" using 1:2
+plot "../Aufgabe2Bodediagramm_tief.txt" using 1:2 
 set output "Aufgabe2Bodediagramm_hochpass_gain.png"
-plot title "" "../Aufgabe2Bodediagramm_hochpass.txt" using 1:2
+plot "../Aufgabe2Bodediagramm_hochpass.txt" using 1:2 
 
 set output "Aufgabe4Bodediagramm_tief_gain_lin.png"
-plot title "" "../Aufgabe4bodediagrammtiefpass.txt" using 1:2 w lines
+plot "../Aufgabe4bodediagrammtiefpass.txt" using 1:2 w lines
 
 set output "Aufgabe4Bodediagramm_tief_gain.png"
-plot title "" "../Aufgabe4bodediagrammtiefpass.txt" using 1:2 
+plot "../Aufgabe4bodediagrammtiefpass.txt" using 1:2 
 
 
 unset yrange
 set output "Aufgabe4bschaltung2.png"
-plot title "" "../Aufgabe4bschaltung2.txt" using 1:2
+plot "../Aufgabe4bschaltung2.txt" using 1:2
 
 set output "Aufgabe4bschaltung2_lin.png"
-plot title "" "../Aufgabe4bschaltung2.txt" using 1:2 w lines
+plot "../Aufgabe4bschaltung2.txt" using 1:2 w lines
 
 
 set ylabel "Phase"
 
 
+set output "Aufgabe4bschaltung2_lin_phase.png"
+plot "../Aufgabe4bschaltung2.txt" using 1:4 
+
 set output "Aufgabe2Bodediagramm_tief_phase.png"
-plot title "" "../Aufgabe2Bodediagramm_tief.txt" using 1:4 w lines
+plot "../Aufgabe2Bodediagramm_tief.txt" using 1:4 w lines
 
 set output "Aufgabe2Bodediagramm_hochpass_phase.png"
-plot title "" "../Aufgabe2Bodediagramm_hochpass.txt" using 1:4 w lines
+plot "../Aufgabe2Bodediagramm_hochpass.txt" using 1:4 w lines
 
 set ylabel "ln(U_aus/U_ein) in dB"
 set output "Aufgabe4Bodediagramm_tief_R_gain.png"
 set yrange [-70:1]
-plot title "" "../Aufgabe4bodediagrammtiefpassmitR.txt" using 1:2 
+plot "../Aufgabe4bodediagrammtiefpassmitR.txt" using 1:2 
 
 set output "Aufgabe4Bodediagramm_tief_R_gain_lin.png"
 set yrange [-70:1]
-plot title "" "../Aufgabe4bodediagrammtiefpassmitR.txt" using 1:2 w lines
+plot "../Aufgabe4bodediagrammtiefpassmitR.txt" using 1:2 w lines

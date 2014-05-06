@@ -112,7 +112,7 @@ Errechneter Wert:
 \begin{frame}
 \begin{block}{Das fehlende Bauelement ist eine Drossel}
 \centering
-\includegraphics[width=\textwidth]{../daten/Messdaten/plots/schalt_4spule.png}
+%\includegraphics[width=\textwidth]{../daten/Messdaten/plots/schalt_4spule.png}
 \end{block}
 \end{frame}
 
@@ -163,4 +163,39 @@ Geschwindigkeit: $\frac{20m}{100ns}=200\frac{m}{s}$
 \end{block}
 \end{frame}
 
+\begin{frame}
+\begin{itemize}
+\item Wiederstand ergänzt die Schaltung zu einem gedämpften Schwingkreis
+\item Ablesen aus dem Graphen ergibt einen Dämpfungsfaktor von ca. $-40 dB$
+\end{itemize}
+\end{frame}
+
+
+\subsection{b)}
+\begin{frame}
+\begin{block}{Messung des zweiten Filters}
+\includegraphics[width=0.85\textwidth]{../daten/Messdaten/plots/schalt_4b}
+\end{block}
+\end{frame}
+\begin{frame}
+\begin{block}{Bodediagramm-Gain}
+\includegraphics[width=0.85\textwidth]{../daten/Messdaten/plots/Aufgabe4bschaltung2}
+
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}
+\begin{block}{dscx}
+\includegraphics[width=0.85\textwidth]{../daten/Messdaten/plots/Aufgabe4bschaltung2_lin_phase}
+
+\end{block}
+\end{frame}
+\begin{frame}
+\begin{itemize}
+\item Schaltung ist ein Bandpassfilter, da für den Kondensator $|Z| \propto \frac{1}{\omega}$ und für die Spule $|Z| \propto \omega $ gilt
+\item Ablesen ergibt für die $3 dB$-Frequenz $\approx 9000 Hz$
+\end{itemize}
+\end{frame}
 \end{document}
