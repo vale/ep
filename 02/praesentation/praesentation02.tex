@@ -36,6 +36,42 @@
 %\includegraphics[width=\textwidth]{images/1a.png} %Schaltbild
 \end{block}
 \end{frame}
+\section{Aufgabe 2}
+\subsection{Tiefpass 1. Ordnung}
+\begin{frame}
+\begin{block}{Schaltplan des Filters}
+\includegraphics[width=\textwidth]{../daten/Messdaten/plots/schalt_tief}
+\end{block}
+\end{frame}
+Bode-Diagramm:
+\includegraphics[width=\textwidth]{../daten/Messdaten/plots/Aufgabe2Bodediagramm_tief_gain}
+
+Die "-3 dB-Frequenz" ist die Frequenz, bei der die ausgehende Spannung der Schaltung auf $\frac{U_{ein}}{\sqrt{2}}$ abgefallen ist. Diese Messung liefert $f_g = 1466.312710 Hz$.\\
+Amplitude eines 
+
+\subsection{Hochpass 1. Ordnung}
+Schaltplan des Filters:\\
+
+\includegraphics[width=\textwidth]{../daten/Messdaten/plots/schalt_hoch}
+Bode-Diagramm:\\
+\includegraphics[width=\textwidth]{../daten/Messdaten/plots/Aufgabe2Bodediagramm_hochpass_gain}
+
+$f_g \approx  1871.747229 Hz$
+
+\subsection{AC-Modus des Oszilloskops}
+\includegraphics[width=\textwidth]{../daten/scope_16}
+Signal trug zusätzlich zur Sinus-Schwingung noch eine Dreiecksspannung mit sehr niedriger Frequenz (der Verlauf deutet sich hier leicht an, da die Sinus-Welle leicht geneigt ist \\
+Signal hat sich auf der Anzeige immer wieder leicht verschoben, es gab aber keine großen Probleme, es zu analysieren\\
+$f_{sin} = 51.9 Hz$\\
+$U_0 = 94 mV$
+
+\includegraphics[width=\textwidth]{../daten/scope_21}
+Vergleich zwischen Signal durch Hochpassfilter (gelb) und direkt in Oszilloskop (grün). Der Hochpass filtert die Dreiecksspannung aus dem Signal.
+
+\includegraphics[width=\textwidth]{../daten/scope_22}
+
+Mit dem AC-Modus aufgenommenes Signal\\
+AC-Modus schaltet einen Hochpass-Filter zwischen Signal und Oszilloskop, der tieffrequente Schwingingen aus dem Signal entfernt
 \section{Aufgabe 3}
 \begin{frame}
 \begin{block}{Gegebene Schaltung}
@@ -83,6 +119,20 @@ Errechneter Wert:
 \begin{block}{Zweite Messung mit Widerstand in Reihe zur Spule}
 \centering
 \includegraphics[width=0.85\textwidth]{../daten/Messdaten/plots/Aufgabe4Bodediagramm_tief_R_gain}
+\end{block}
+\end{frame}
+\section{Aufgabe 5}
+\subsection{a)}
+\begin{frame}
+\begin{block}{Zwei Peaks des Pulses}
+\centering
+\includegraphics[width=.85\textwidth]{../daten/scope_28.png}
+\end{block}
+\end{frame}
+\begin{frame}
+\begin{block}{Zeitdifferenz zwischen den Peaks von $100 ns$}
+\centering
+\includegraphics[width=.85\textwidth]{../daten/scope_29.png}
 \end{block}
 \end{frame}
 \end{document}
