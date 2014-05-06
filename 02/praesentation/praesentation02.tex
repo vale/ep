@@ -30,12 +30,31 @@
 \end{frame}
 
 \section{Aufgabe 1}
-\subsection{a)}
-\begin{frame}{Innenwiderstand}
-\begin{block}{Shuntwiderstand im DMM}
-%\includegraphics[width=\textwidth]{images/1a.png} %Schaltbild
+\begin{frame}
+\begin{block}{Schaltplan Messung der Spule}
+\includegraphics[width=.7\textwidth]{../daten/Messdaten/plots/spule}
 \end{block}
 \end{frame}
+
+\begin{frame}
+\begin{block}{Schaltplan Messung des Kondesator}
+\includegraphics[width=.7\textwidth]{../daten/Messdaten/plots/kondensator}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Schaltplan Messung des Widerstands}
+\includegraphics[width=.7\textwidth]{../daten/Messdaten/plots/widerstand}
+\end{block}
+\end{frame}
+
+\begin{frame}
+Gleichung zur Berechnung des komplexen Widerstands
+\begin{equation}
+Z=\frac{U}{I}(\cos \varphi +i \sin \phi)
+\end{equation}
+\end{frame}
+
 \section{Aufgabe 2}
 \subsection{Tiefpass 1. Ordnung}
 \begin{frame}
@@ -44,7 +63,8 @@
 \end{block}
 \end{frame}
 \begin{frame}\begin{block}{Bode-Diagramm}
-\includegraphics[width=\textwidth]{../daten/Messdaten/plots/Aufgabe2Bodediagramm_tief_gain}
+\centering
+\includegraphics[width=.85\textwidth]{../daten/Messdaten/plots/Aufgabe2Bodediagramm_tief_gain}
 \end{block}
 \end{frame}
 \begin{frame}
@@ -58,6 +78,7 @@ Die "-3 dB-Frequenz" ist die Frequenz, bei der die ausgehende Spannung der Schal
 \includegraphics[width=\textwidth]{../daten/Messdaten/plots/schalt_hoch}
 \end{block}\end{frame}
 \begin{frame}\begin{block}{Bode-Diagramm}
+\centering
 \includegraphics[width=.7\textwidth]{../daten/Messdaten/plots/Aufgabe2Bodediagramm_hochpass_gain}
 \end{block}
 
@@ -65,7 +86,7 @@ $f_g \approx  1871.747229 Hz$
 \end{frame}
 \subsection{AC-Modus des Oszilloskops}
 \begin{frame}
-\includegraphics[width=\textwidth]{../daten/scope_16}
+\includegraphics[width=.9\textwidth]{../daten/scope_16}
 \end{frame}
 \begin{frame}
 Signal trug zusätzlich zur Sinus-Schwingung noch eine Dreiecksspannung mit sehr niedriger Frequenz (der Verlauf deutet sich hier leicht an, da die Sinus-Welle leicht geneigt ist \\
@@ -73,13 +94,19 @@ Signal hat sich auf der Anzeige immer wieder leicht verschoben, es gab aber kein
 $f_{sin} = 51.9 Hz$\\
 $U_0 = 94 mV$
 \end{frame}
-\includegraphics[width=\textwidth]{../daten/scope_21}
+
+\begin{frame}
+\includegraphics[width=.9\textwidth]{../daten/scope_21}
 Vergleich zwischen Signal durch Hochpassfilter (gelb) und direkt in Oszilloskop (grün). Der Hochpass filtert die Dreiecksspannung aus dem Signal.
+\end{frame}
+\begin{frame}
+\includegraphics[width=.9\textwidth]{../daten/scope_22}
+\end{frame}
 
-\includegraphics[width=\textwidth]{../daten/scope_22}
-
+\begin{frame}
 Mit dem AC-Modus aufgenommenes Signal\\
 AC-Modus schaltet einen Hochpass-Filter zwischen Signal und Oszilloskop, der tieffrequente Schwingingen aus dem Signal entfernt
+\end{frame}
 \section{Aufgabe 3}
 \begin{frame}
 \begin{block}{Gegebene Schaltung}
@@ -112,7 +139,7 @@ Errechneter Wert:
 \begin{frame}
 \begin{block}{Das fehlende Bauelement ist eine Drossel}
 \centering
-%\includegraphics[width=\textwidth]{../daten/Messdaten/plots/schalt_4spule.png}
+\includegraphics[width=\textwidth]{../daten/Messdaten/plots/schalt_4spule.png}
 \end{block}
 \end{frame}
 
@@ -162,40 +189,9 @@ Geschwindigkeit: $\frac{20m}{100ns}=200\frac{m}{s}$
 \includegraphics[width=.85\textwidth]{../daten/scope_31.png}
 \end{block}
 \end{frame}
-
 \begin{frame}
-\begin{itemize}
-\item Wiederstand ergänzt die Schaltung zu einem gedämpften Schwingkreis
-\item Ablesen aus dem Graphen ergibt einen Dämpfungsfaktor von ca. $-40 dB$
-\end{itemize}
-\end{frame}
-
-
-\subsection{b)}
-\begin{frame}
-\begin{block}{Messung des zweiten Filters}
-\includegraphics[width=0.85\textwidth]{../daten/Messdaten/plots/schalt_4b}
+\begin{block}{Reflektierendes Ende des Kabels in lila}
+\includegraphics[width=.85\textwidth]{../daten/scope_31.png}
 \end{block}
-\end{frame}
-\begin{frame}
-\begin{block}{Bodediagramm-Gain}
-\includegraphics[width=0.85\textwidth]{../daten/Messdaten/plots/Aufgabe4bschaltung2}
-
-\end{block}
-\end{frame}
-
-
-
-\begin{frame}
-\begin{block}{dscx}
-\includegraphics[width=0.85\textwidth]{../daten/Messdaten/plots/Aufgabe4bschaltung2_lin_phase}
-
-\end{block}
-\end{frame}
-\begin{frame}
-\begin{itemize}
-\item Schaltung ist ein Bandpassfilter, da für den Kondensator $|Z| \propto \frac{1}{\omega}$ und für die Spule $|Z| \propto \omega $ gilt
-\item Ablesen ergibt für die $3 dB$-Frequenz $\approx 9000 Hz$
-\end{itemize}
 \end{frame}
 \end{document}
