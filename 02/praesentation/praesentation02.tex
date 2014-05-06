@@ -43,28 +43,36 @@
 \includegraphics[width=\textwidth]{../daten/Messdaten/plots/schalt_tief}
 \end{block}
 \end{frame}
-Bode-Diagramm:
+\begin{frame}\begin{block}{Bode-Diagramm}
 \includegraphics[width=\textwidth]{../daten/Messdaten/plots/Aufgabe2Bodediagramm_tief_gain}
+\end{block}
+\end{frame}
+\begin{frame}
+Die "-3 dB-Frequenz" ist die Frequenz, bei der die ausgehende Spannung der Schaltung auf $\frac{U_{ein}}{\sqrt{2}}$ abgefallen ist. Diese Messung liefert $f_g = 1466.312710 Hz$.
+\end{frame}
 
-Die "-3 dB-Frequenz" ist die Frequenz, bei der die ausgehende Spannung der Schaltung auf $\frac{U_{ein}}{\sqrt{2}}$ abgefallen ist. Diese Messung liefert $f_g = 1466.312710 Hz$.\\
-Amplitude eines 
 
 \subsection{Hochpass 1. Ordnung}
-Schaltplan des Filters:\\
 
+\begin{frame}\begin{block}{Schaltplan des Filters}
 \includegraphics[width=\textwidth]{../daten/Messdaten/plots/schalt_hoch}
-Bode-Diagramm:\\
-\includegraphics[width=\textwidth]{../daten/Messdaten/plots/Aufgabe2Bodediagramm_hochpass_gain}
+\end{block}\end{frame}
+\begin{frame}\begin{block}{Bode-Diagramm}
+\includegraphics[width=.7\textwidth]{../daten/Messdaten/plots/Aufgabe2Bodediagramm_hochpass_gain}
+\end{block}
 
 $f_g \approx  1871.747229 Hz$
-
+\end{frame}
 \subsection{AC-Modus des Oszilloskops}
+\begin{frame}
 \includegraphics[width=\textwidth]{../daten/scope_16}
+\end{frame}
+\begin{frame}
 Signal trug zusätzlich zur Sinus-Schwingung noch eine Dreiecksspannung mit sehr niedriger Frequenz (der Verlauf deutet sich hier leicht an, da die Sinus-Welle leicht geneigt ist \\
 Signal hat sich auf der Anzeige immer wieder leicht verschoben, es gab aber keine großen Probleme, es zu analysieren\\
 $f_{sin} = 51.9 Hz$\\
 $U_0 = 94 mV$
-
+\end{frame}
 \includegraphics[width=\textwidth]{../daten/scope_21}
 Vergleich zwischen Signal durch Hochpassfilter (gelb) und direkt in Oszilloskop (grün). Der Hochpass filtert die Dreiecksspannung aus dem Signal.
 
@@ -137,6 +145,22 @@ Errechneter Wert:
 \end{frame}
 \begin{frame}
 Das Signal benötigt Zeit um sich im Kabel auszubreiten. Am offenen Ende des Kabels baut sich eine Spannung auf, die dazu führt, dass das Signal wieder in die Gegenrichtung fließt. \\
-$\Rightarrow \Delta t$ ist die doppelte Laufzeit durch das Kabel
+$\Rightarrow \Delta t$ ist die doppelte Laufzeit durch das Kabel\\
+Geschwindigkeit: $\frac{20m}{100ns}=200\frac{m}{s}$
 \end{frame}
+
+\begin{frame}
+\begin{block}{Dämpfung des Reflektierten Signals durch Potentiometer ($53.96\Omega$) als Abschlusswiderstand}
+\centering
+\includegraphics[width=.85\textwidth]{../daten/scope_30.png}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Dämpfung des Reflektierten Signals durch $50\Omega$-Abschlusswiderstand (DMM Messung $49.62\Omega$)}
+\centering
+\includegraphics[width=.85\textwidth]{../daten/scope_31.png}
+\end{block}
+\end{frame}
+
 \end{document}
