@@ -1,13 +1,14 @@
 set term png
+unset key
 set logscale x
 set xlabel "ln(f), fin Hz"
 
 set ylabel "ln(U_aus/U_ein) in dB"
 
 set output "Aufgabe2Bodediagramm_tief_gain.png"
-plot "../Aufgabe2Bodediagramm_tief.txt" using 1:2
+plot "../Aufgabe2Bodediagramm_tief.txt" using 1:2 
 set output "Aufgabe2Bodediagramm_hochpass_gain.png"
-plot "../Aufgabe2Bodediagramm_hochpass.txt" using 1:2
+plot "../Aufgabe2Bodediagramm_hochpass.txt" using 1:2 
 
 set output "Aufgabe4Bodediagramm_tief_gain_lin.png"
 plot "../Aufgabe4bodediagrammtiefpass.txt" using 1:2 w lines
