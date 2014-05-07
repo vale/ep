@@ -28,6 +28,9 @@ plot "../Aufgabe4bschaltung2.txt" using 1:2 w lines
 set ylabel "Phase"
 
 
+set output "Aufgabe4bschaltung2_lin_phase.png"
+plot "../Aufgabe4bschaltung2.txt" using 1:4 
+
 set output "Aufgabe2Bodediagramm_tief_phase.png"
 plot "../Aufgabe2Bodediagramm_tief.txt" using 1:4 w lines
 
