@@ -1,0 +1,11 @@
+set logscale x
+set xlabel "Frequenz in Hz"
+set ylabel "Gain in dB"
+set term png
+set output "32bodegain.png"
+plot "32bodediagrammbis1hz.txt" using 1:2
+
+
+set ylabel "Phase in deg"
+set output "32bodephase.png"
+plot "32bodediagrammbis1hz.txt" using 1:4
