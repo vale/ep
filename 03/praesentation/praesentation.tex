@@ -204,12 +204,74 @@ Gegentakt: Signale sind in der Phase versetzt
 \end{block}
 \end{frame}
 \begin{frame}
-Theoriewerte:
+\begin{block}{Theorie}
+Gegentaktverstärkung:
 \begin{equation}
 G_{diff} = \frac{R_C}{2 \cdot R_E} = 5
 \end{equation}
+Gleichtakt-Verstärkung (sollte nach Vorlesung gleich null sein, zweite Formel aus VL ergibt):
 \begin{equation}
 G_{CM} = \frac{R_C}{2 \cdot R_1 + R_E} \approx 0.6
 \end{equation}
+Gleichtaktunterdrückung (nach VL gegen unendlich)
+\end{block}
+\end{frame}
+\begin{frame}
+Messung ergibt für Gleichtaktbetrieb:
+\includegraphics[width=.7\textwidth]{../daten/messungen/3aufgabe/1cm}\\
+\end{frame}
+\begin{frame}
+und für Gegentaktbetrieb:
+\includegraphics[width=.7\textwidth]{../daten/messungen/3aufgabe/1diff}\\
+\end{frame}
+\begin{frame}
+Werte der Verstärkung $\approx$ Steigung der Regressionsgeraden:
+
+\begin{equation}
+G_{CM} = -0.000752511
+\end{equation}
+\begin{equation}
+G_{diff} = 0.0390561
+\end{equation}
+\begin{equation}
+CMRR = |\frac{G_{diff}}{G_{CM}}| = 51.901
+\end{equation}
+
+\end{frame}
+\begin{frame}
+Folgerung:\\
+\begin{itemize}
+\item Linearer Verlauf (ziemlich genau)
+\item Widerstände dämpfen und verursachen Abweichungen
+\end{itemize}
+\end{frame}
+\subsection{Differenzverstärker mit Konstantstromquelle}
+\begin{frame}
+Schaltbild:\\
+\includegraphics[width=.7\textwidth]{schaltbilder/schalt_3d}\\
+Durchführung genau wie bei vorheriger Schaltung
+\end{frame}
+
+
+\begin{frame}
+Messung ergibt für Gleichtaktbetrieb:
+\includegraphics[width=.7\textwidth]{../daten/messungen/3aufgabe/2cm}\\
+\end{frame}
+\begin{frame}
+und für Gegentaktbetrieb:
+\includegraphics[width=.7\textwidth]{../daten/messungen/3aufgabe/2diff}\\
+\end{frame}
+\begin{frame}
+\begin{equation}
+G_{CM} = -0.000227725
+\end{equation}
+\begin{equation}
+G_{diff} = 0.022943
+\end{equation}
+\begin{equation}
+CMRR = |\frac{G_{diff}}{G_{CM}}| = 100.75
+\end{equation}
+Konstantstromquelle verbessert Gleichtaktverstärkung
+
 \end{frame}
 \end{document}
