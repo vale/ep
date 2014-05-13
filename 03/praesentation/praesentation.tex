@@ -31,26 +31,66 @@
 
 
 \section{Aufgabe 2}
+\begin{frame}Schaltbild des ersten Aufbaus:\\
+\includegraphics[width=.7\textwidth]{schaltbilder/2}\\
+\end{frame}
 \begin{frame}
-%\includegraphics schaltung
-%\end{frame}
-%\begin{frame}
+
 \subsection{Erste Version der Schaltung}
 \begin{itemize}
 \item Transistor hier als Schalter, da Strom nur fließt, wenn $U_{CE} \neq 0$
-\item Sobald der Schalter in der ersten Schaltung geschlossen ist, liegt an Collector und Emitter eine Spannung an und der Transistor lässt durch $\Rightarrow$ iode leuchtet
+\item Sobald der Schalter in der ersten Schaltung geschlossen ist, liegt an Collector und Emitter eine Spannung an und der Transistor lässt durch $\Rightarrow$ Diode leuchtet
 \end{itemize}
-\subsection{Zweite Version der Schaltung}
-\begin{itemize}
-\item Jetzt liegt konstante Spannung an Collektor und Emitter $\Rightarrow$ Transistor sperrt nicht und Diode leuchtet
-\item Schaltung
-\end{itemize}
+
 \end{frame}
 
+\subsection{Zweite Version der Schaltung}
+\begin{frame}
+Schaltbild des zweiten Aufbaus:\\
+\includegraphics[width=.7\textwidth]{schaltbilder/21}\\
 
+\end{frame}
+\begin{frame}
+\begin{itemize}
+\item Jetzt liegt konstante Spannung an Collektor und Emitter $\Rightarrow$ Transistor sperrt nicht und Diode leuchtet
+\item Sobald Schalter geschlossen wird, wird die Basis kurzgeschlossen, also $U_B = 0$ $\Rightarrow$ Transistor sperrt und Diode leuchtet nicht
+\end{itemize}
+Beide Schaltungen sind aber physikalisch äquivalent
+\end{frame}
 
+\begin{frame}
 
+Verwendet wurde eine blaue LED\\
+LED sollte nach Aufgabenstellung nur mit einem Strom von max. $20 mA$ betrieben werden\\
+Mit "Forward Voltage" $U_F = 3.6 V$ aus dem Datenblatt ergibt sich als Vorwiderstand
 
+\begin{equation}
+R_{2,min} = \frac{3.6 V}{20 mA} = 180 \Omega
+\end{equation}
+Verwendet wurde aber ein $470 \Omega$-Widerstand
+
+\end{frame}
+\begin{frame}
+Strom durch Basis/Schalter:
+\begin{equation}
+I_B = \frac{U}{R_1} = \frac{9 V}{10 k\Omega} = 0.0009 A
+\end{equation}
+Strom durch LED $=$ Strom durch $R_2$:
+\begin{equation}
+I_C = \frac{U_{R_2}}{R_2} = \frac{6.56 V}{470 \Omega} = 13.957 mA
+\end{equation}
+\end{frame}
+\begin{frame}
+Zur Bestimmung der Arbeitspunktes muss $U_{CE}$ noch ermittelt werden:
+\begin{equation}
+U_{CC} = U_{LED} + U_R + U_{CE} \Rightarrow U_{CE} = U_{CC} - U_{LED} - U_R
+\end{equation}
+\begin{equation}
+= 9 V - 6.56 V -3.6 V = -0.12 V
+\end{equation}
+$\Rightarrow$ Schwellenwiderstand der LED muss kleiner sein als 3.6 V \\ $\Rightarrow$ $U_{CE}$ aber dennoch klein \\ $\Rightarrow$ Transistor im Sättigungsbereich\\
+Transistor als "Schalter", da die CE-Strecke nur leitet, wenn$I_B \neq 0$
+\end{frame}
 
 
 
