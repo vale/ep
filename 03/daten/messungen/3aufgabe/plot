@@ -1,7 +1,35 @@
+set term png
+
+set ylabel "U_out in V"
+set xlabel "U_diff in V"
+set output "1diff.png"
+f(x)=gdiff*x+b
+fit f(x) "33Udiff.txt" using  1:3 via gdiff,b
+plot "33Udiff.txt" using 1:3, f(x)
+
+set output "2diff.png"
+l(x)=g2diff*x+w
+fit l(x) "33Udiffkonstantstromquelle.txt" using  1:3 via g2diff,w
+plot "33Udiffkonstantstromquelle.txt" using 1:3, l(x)
+
+
+g(x)=gcm*x+d
+set output "1cm.png"
+set xlabel "U_cm in V"
+
+fit g(x) "33Ucm.txt" using  2:3 via gcm,d
+plot "33Ucm.txt" usin 2:3, g(x)
+
+
+set output "2cm.png"
+m(x)=g2cm*x+o
+fit m(x) "33Ucmkonstantstromquelle.txt" using  2:3 via g2cm,o
+plot "33Ucmkonstantstromquelle.txt" usin 2:3, m(x)
+
 set logscale x
 set xlabel "Frequenz in Hz"
 set ylabel "Gain in dB"
-set term png
+
 set output "32bodegain.png"
 plot "32bodediagrammbis1hz.txt" using 1:2
 
