@@ -1,0 +1,24 @@
+set term png
+set logscale x 
+set xlabel "f in Hz"
+
+set ylabel "Gain in dB"
+set output "1stufegain.png"
+plot "1stufebode.txt" using 1:2 w lines
+
+set output "2stufegain.png"
+plot "2stufebode.txt" using 1:2 w lines
+
+set output "4stufegain.png"
+plot "4ordnungbode.txt" using 1:2 w lines
+
+
+set ylabel "Phase"
+set output "1stufephase.png"
+plot "1stufebode.txt" using 1:4 w lines
+
+set output "2stufephase.png"
+plot "2stufebode.txt" using 1:4 w lines
+
+set output "4stufephase.png"
+plot "4ordnungbode.txt" using 1:4 w lines

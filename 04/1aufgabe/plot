@@ -1,0 +1,6 @@
+set term png
+set xlabel "U_diff in V"
+set ylabel "U_out in V"
+set output "r2variiert.png"
+
+plot "r2variiert_umschaltpunkt_viele_punkte.txt"
