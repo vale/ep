@@ -2,8 +2,4 @@ set term png
 set xlabel "U_diff in V"
 set ylabel "U_out in V"
 set output "r2variiert.png"
-f(x)=a*x
-a=1000
-set xrange [-10:10]
-set yrange [-9:9]
-plot "r2variiert_umschaltpunkt_viele_punkte.txt", f(x)
+plot "r2variiert_umschaltpunkt_viele_punkte.txt"

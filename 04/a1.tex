@@ -59,29 +59,54 @@ Dadurch erklärt sich auch die Komparator-Schaltung:
 \end{itemize}
 \end{frame}
 \begin{frame}
-%\includegraphics[scale=•]{•}
+\includegraphics[width=.7\textwidth]{1aufgabe/r2variiert}\\
 Ausgangsspannung über der Differenz der Eingangsspannungen\\ 
-Es werden beim "Umschaltpunkt" $U_{diff} = 0$ auch Messwerte zwischen $U_{min}$ und $U_{max}$ gemessen $\Rightarrow$ reale Verstärkung $V < \infty$
+Es werden beim "Umschaltpunkt" $U_{diff} = 0$ auch Messwerte zwischen $U_{min}$ und $U_{max}$ gemessen $\Rightarrow$ reale Verstärkung $V < \infty $ \\
+
+
+\end{frame}
+\begin{frame}
+Mittels MATLAB wurde der Mittelwert der beiden Ausgangsspannungen berechnet:
+\begin{equation}
+U_{min} \approx -7.582769178498975 V 
+\end{equation}
+\begin{equation}
+U_{max} \approx 8.398013199195182 V
+\end{equation}
 \end{frame} 
 \begin{frame}
+\includegraphics[width=.7\textwidth]{../problem}\\
+Problem bei Bestimmung der Verstärkung:  innerhalb eines Intervalls wurden mehrere x-Werte gemessen $\Rightarrow$ Verstärkung durch fitten zu ermittlen nicht möglich
+\end{frame}
+\begin{frame}
 Grobe Abschätzug der Verstärkung:\begin{itemize}
-
 \item Lege eine Steigungsgerade durch den Streifen, in dem zu einem x-Wert verschiedene y-Werte zwischen $U_{min}$ und $U_{max}$ liegen
 \item berechne beispielsweise den Mittelwert der $U_{out}$ für $U_{diff} > 0$ und $ < 0$
 \item suche die x-Punkte $U_{diff}$, für die sich $U_{out}$ (falls mehrere Messpunkte existieren) nicht mehr wesentlich ändert
 \item berechne Differenzenquotient (Die Verstärkung muss mindestens diesem Wert entsprechen)
 \end{itemize}
+So ergeben sich die Punkte $U_{diff,min} = -0.000727677 V$ und $U_{diff,max} = 0.00121911 V$ und für die Verstärkung $V = 8.21 \cdot 10^3$
 \end{frame}
-
 
 \begin{frame}
 Die Schaltung wurde nun verändert:\\
 
-\includegraphics[width=.7\textwidth]{schalt/schalt11}
+\includegraphics[width=.7\textwidth]{schalt/schalt12}\\
 
 
 \end{frame}
 \begin{frame}
-
+\includegraphics[width=.7\textwidth]{oszi/scope_53}\\
+gelb: $U_{out}$\\
+grün: $U_{in}$\\
+lila: $U_{ref}$\\
+Aufnahme mit $U_{ref} > 0$
 \end{frame}
+
+\begin{frame}
+\includegraphics[width=.7\textwidth]{oszi/scope_54}\\
+Aufnahme mit $U_{ref} < 0$\\
+$U_{ref}$ ist das Potential, um das geschwungen wird. Sobald $U_{in} - U_{ref} < 0$, wechselt die Ausgangsspannung.
+\end{frame}
+
 \end{document}
