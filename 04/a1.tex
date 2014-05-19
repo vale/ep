@@ -32,7 +32,11 @@
 \section{Aufgabe 1: Komparator}
 \begin{frame}
 Aufzubauen war folgende Schaltung:
-% erste komparatorschaltung
+\includegraphics[width=.7\textwidth]{schalt/schalt11}
+\end{frame}
+
+\begin{frame}Verwenderter Operationsverstärker
+\includegraphics[width=.7\textwidth]{schalt/opamp_innen}
 \end{frame}
 
 \begin{frame}
@@ -46,6 +50,7 @@ Aufzubauen war folgende Schaltung:
 
 \end{block}
 \end{frame}
+
 \begin{frame}
 Dadurch erklärt sich auch die Komparator-Schaltung:
 \begin{itemize}
@@ -58,10 +63,22 @@ Dadurch erklärt sich auch die Komparator-Schaltung:
 Ausgangsspannung über der Differenz der Eingangsspannungen\\ 
 Es werden beim "Umschaltpunkt" $U_{diff} = 0$ auch Messwerte zwischen $U_{min}$ und $U_{max}$ gemessen $\Rightarrow$ reale Verstärkung $V < \infty$
 \end{frame} 
+\begin{frame}
+Grobe Abschätzug der Verstärkung:\begin{itemize}
+
+\item Lege eine Steigungsgerade durch den Streifen, in dem zu einem x-Wert verschiedene y-Werte zwischen $U_{min}$ und $U_{max}$ liegen
+\item berechne beispielsweise den Mittelwert der $U_{out}$ für $U_{diff} > 0$ und $ < 0$
+\item suche die x-Punkte $U_{diff}$, für die sich $U_{out}$ (falls mehrere Messpunkte existieren) nicht mehr wesentlich ändert
+\item berechne Differenzenquotient (Die Verstärkung muss mindestens diesem Wert entsprechen)
+\end{itemize}
+\end{frame}
 
 
 \begin{frame}
 Die Schaltung wurde nun verändert:\\
+
+\includegraphics[width=.7\textwidth]{schalt/schalt11}
+
 
 \end{frame}
 \begin{frame}
