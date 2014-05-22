@@ -1,0 +1,18 @@
+set term png
+
+set xlabel "Zeit in s"
+
+set output "2a_T.png"
+set ylabel "Temperatur (Istwert) in Grad Celsius"
+set xrange [300:]
+#plot "2a.txt" using 1:2 title "Istwert", "2a.txt" using 1:7 title "Sollwert"
+plot "2a.txt" using 1:2 title "Istwert"
+
+set output "2a_T_genauer.png"
+set xrange [:]
+set yrange [55:65]
+plot "2a.txt" using 1:2 title "Istwert", "2a.txt" using 1:7 w lines title "Sollwert"
+
+set output "2a_T_genauer_lines.png"
+plot "2a.txt" using 1:2 w lines title   "Istwert", "2a.txt" using 1:7 w lines title "Sollwert"
+
