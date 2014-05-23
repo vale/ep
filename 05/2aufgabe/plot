@@ -35,6 +35,19 @@ set xrange [0:]
 plot "2bk5v2.txt" using 1:2 title "Istwert", "2bk5v2.txt" using 1:7 w lines title "Sollwert"
 
 #teil c
+set output "2c1.png"
+set yrange [0:80]
+plot "2c.txt" using 1:2 title "Istwert", "2c.txt" using 1:7 w lines title "Sollwert"
+
+set output "2c2.png"
+plot "2c_p0_i100_anti_windup.txt" using 1:2 title "Istwert", "2c_p0_i100_anti_windup.txt" using 1:7 w lines title "Sollwert"
 
 
+#maximale  Abweichung  von  der  Solltemperatur  für  jede  Halbperiode 
 
+set yrange [0:20]
+set output "2c1_betrag.png"
+plot "2c.txt" using 1:(sqrt(($2-$7)**2)) 
+
+set output "2c2_betrag.png"
+plot "2c_p0_i100_anti_windup.txt" using 1:(sqrt(($2-$7)**2)) 
