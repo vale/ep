@@ -77,7 +77,7 @@ Hierbei sind:
 \begin{frame}
 
 
-\subsection{Aufgabe a)}
+\section{Selbsständige Regelung}
 %Schaltung
 \begin{itemize}
 \item Metallblock wurde mittels Peltierelement erwärmt
@@ -101,7 +101,7 @@ Ergebnis der Regelung
 
 
 
-\subsection{Aufgabe b)}
+\section{P-Regler}
 \begin{frame}
 Experiment wird nun mit automatisierter P-Regelung bei verschiedenen $K_p$-Parametern am Computer durchgeführt:\\
 
@@ -125,7 +125,7 @@ Regelung bei $K_p = 5$
 \item Vergleich der Regler bei $K_p = 1$ und $0.1$ zeigt, dass die Regelgeschwindigkeit proportional zum Regelfaktor ist 
 \end{itemize}
 \end{frame}
-\subsection{Aufgabe c) (I-Regler)}
+\section{I-Regler}
 \begin{frame}
 \begin{itemize}
 \item Abkühlung des Blockes auf ca. 50 $^\circ$ C
@@ -135,7 +135,7 @@ Regelung bei $K_p = 5$
 \includegraphics[width=.5\textwidth]{../2aufgabe/2c1_I}
 \end{frame}
 \begin{frame}
-\includegraphics[width=.5\textwidth]{../2aufgabe/2c1_betrag}
+\includegraphics[width=.7\textwidth]{../2aufgabe/2c1_betrag}
 \end{frame}
 
 
@@ -150,7 +150,7 @@ Regelung bei $K_p = 5$
 \includegraphics[width=.5\textwidth]{../2aufgabe/2c2_I}
 \end{frame}
 \begin{frame}
-\includegraphics[width=.5\textwidth]{../2aufgabe/2c2_betrag}
+\includegraphics[width=.7\textwidth]{../2aufgabe/2c2_betrag}
 \end{frame}
 \begin{frame}
 \begin{block}{Zur "anti-windup-Funktion"}
@@ -172,8 +172,45 @@ Und für die zweite:  $t_0 \approx 174212 s$
 I-Regelung ist in den meisten Fällen alleine nicht für den praktischen Gebrauch geeignet
 \end{block}
 \end{frame}
-\subsection{PI-Regler}
+\section{PI-Regler}
+\begin{frame}
+\begin{itemize}
+\item Messung wurde nun mit $K_p = 0.2$ und $t_i =200s$ durchgeführt
+\end{itemize}
+\includegraphics[width=.5\textwidth]{../2aufgabe/2dk,2}
+\includegraphics[width=.5\textwidth]{../2aufgabe/2dk,2_parameter}\\
+$|T_{ist} - T_{soll}| \leq 0.1 K$ wurde ab $t \approx 190 s$ erreicht 
+\end{frame}
 
 
+\begin{frame}
+Da Parameter noch nicht optimal gewählt $\Rightarrow$ Justiere $K_p$\\
+\includegraphics[width=.7\textwidth]{../2aufgabe/2dk2ti200}\\
+Hier wird nach ca.$82 s$ $|T_{ist} - T_{soll}| \leq 0.25 K$ erreicht
+\end{frame}
+\begin{frame}
+Justierung des I-Reglers führte auf $t_i = 100 s$\\
+\includegraphics[width=.7\textwidth]{../2aufgabe/2dk2ti100}\\
+Nach ca. $94 s$ wird $|T_{ist} - T_{soll}| \leq 0.035 K$ erreicht
+\end{frame}
 
+\section{D-Regler}
+
+\begin{frame}
+\begin{itemize}
+\item Messung nun mit D-Regelung bei $t_d = 1 s$
+\end{itemize}
+\includegraphics[width=.7\textwidth]{../2aufgabe/2etd1}
+\end{frame}
+\begin{frame}
+\begin{itemize}
+\item D-Anteil proportional zur Steigungsänderung
+\item D-Regler hat daher auch keinen Bezug zur Sollgröße 
+\item keine wirkliche Regelung, sondern nur Korrektur
+\end{itemize}
+\end{frame}
+\begin{frame}
+Eigenschaften des D-Reglers werden bei Wechsel der Regelung deutlich:\\
+\includegraphics[width=.7\textwidth]{../2aufgabe/2et60Cd1}
+\end{frame}
 \end{document}

@@ -2,9 +2,10 @@ set term png
 #using 1:($3/($7-$2)) w lines
 
 set xlabel "Zeit in s"
+set ylabel "Temperatur (Istwert/Sollwert) in Grad Celsius"
+
 
 set output "2a_T.png"
-set ylabel "Temperatur (Istwert) in Grad Celsius"
 set xrange [300:]
 #plot "2a.txt" using 1:2 title "Istwert", "2a.txt" using 1:7 title "Sollwert"
 plot "2a.txt" using 1:2 title "Istwert"
@@ -51,12 +52,36 @@ plot "2c.txt" using 1:(sqrt(($2-$7)**2))
 set output "2c2_betrag.png"
 plot "2c_p0_i100_anti_windup.txt" using 1:(sqrt(($2-$7)**2)) 
 
+##
+reset
+set term png
+#using 1:($3/($7-$2)) w lines
+set xlabel "Zeit in s"
+set ylabel "Temperatur (Istwert/Sollwert) in Grad Celsius"
+##
+
+set output "2dk,2.png"
+plot "2dk,2ti200.txt" using 1:2 title "Istwert", "2dk,2ti200.txt" using 1:7 w lines title "Sollwert"
+
+set ylabel "Regelparameter"
+set output "2dk,2_parameter.png"
+plot "2dk,2ti200.txt" using 1:3 title "P", "2dk,2ti200.txt" using 1:4 title "I"
+
+set ylabel "Temperatur (Istwert/Sollwert) in Grad Celsius"
+
+
+
+
+
+
+reset
 f(x)=a*x+b
 fit f(x) "2c1_null.dat" via a,b
-set output "mf.png"
+set output "mf1.png"
 set yrange [40:90]
 plot "2c1_null.dat", f(x)
 
+set output "mf2.png"
 g(x)=c*x+d
 fit g(x) "2c2_null.dat" via c,d
-
+plot "2c2_null.dat", f(x)
