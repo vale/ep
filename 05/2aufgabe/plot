@@ -30,17 +30,16 @@ set xrange [0:]
 plot "2bk,1v2.txt" using 1:2 title "Istwert", "2bk,1v2.txt" using 1:7 w lines title "Sollwert"
 
 set output "2bk5.png"
-set yrange [40:]
+set yrange [50:70]
 set xrange [0:]
 plot "2bk5v2.txt" using 1:2 title "Istwert", "2bk5v2.txt" using 1:7 w lines title "Sollwert"
 
 #teil c
 set output "2c1.png"
-set yrange [0:80]
-plot "2c.txt" using 1:2 title "Istwert", "2c.txt" using 1:7 w lines title "Sollwert"
+plot "2c.txt" using 1:2 title "Istwert", "2c.txt" using 1:7 w lines title "Sollwert", "2c.txt" using 1:4 title "I"
 
 set output "2c2.png"
-plot "2c_p0_i100_anti_windup.txt" using 1:2 title "Istwert", "2c_p0_i100_anti_windup.txt" using 1:7 w lines title "Sollwert"
+plot "2c_p0_i100_anti_windup.txt" using 1:2 title "Istwert", "2c_p0_i100_anti_windup.txt" using 1:7 w lines title "Sollwert", "2c_p0_i100_anti_windup.txt" using 1:4 title "I"
 
 
 #maximale  Abweichung  von  der  Solltemperatur  für  jede  Halbperiode 
@@ -51,3 +50,13 @@ plot "2c.txt" using 1:(sqrt(($2-$7)**2))
 
 set output "2c2_betrag.png"
 plot "2c_p0_i100_anti_windup.txt" using 1:(sqrt(($2-$7)**2)) 
+
+f(x)=a*x+b
+fit f(x) "2c1_null.dat" via a,b
+set output "mf.png"
+set yrange [40:90]
+plot "2c1_null.dat", f(x)
+
+g(x)=c*x+d
+fit g(x) "2c2_null.dat" via c,d
+

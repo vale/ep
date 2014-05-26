@@ -125,8 +125,44 @@ Regelung bei $K_p = 5$
 \item Vergleich der Regler bei $K_p = 1$ und $0.1$ zeigt, dass die Regelgeschwindigkeit proportional zum Regelfaktor ist 
 \end{itemize}
 \end{frame}
-\subsection{Aufgabe c)}
+\subsection{Aufgabe c) (I-Regler)}
 \begin{frame}
+\begin{itemize}
+\item Abkühlung des Blockes auf ca. 50 $^\circ$ C
+\item Dann I-Regelung der Temperatur mit $t_i = 100 s$
+\end{itemize}
+\includegraphics[width=.5\textwidth]{../2aufgabe/2c1}
+\includegraphics[width=.5\textwidth]{../2aufgabe/2c1_I}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\begin{itemize}
+\item Gleiche Messung wie eben
+\item Es wurde allerdings "anti-windup-Funktion" verwendet
+\end{itemize}
+\includegraphics[width=.5\textwidth]{../2aufgabe/2c2}
+\includegraphics[width=.5\textwidth]{../2aufgabe/2c2_I}
+\end{frame}
+\begin{frame}
+\begin{block}{Zur "anti-windup-Funktion"}
+\begin{itemize}
+\item Regelgröße berechnet sich bei uns durch $R = P + I + D$
+\item falls $P + I + D > 2$ bzw. $P + I + D < 0$, wird $P + I + D = 2$ bzw. $= 0$ gesetzt
+\item verhindert zu starken Ausschlag des Reglers und damit zu starke Oszilation der Ist-Wert-Kurve
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+Grobe Abschätzunng des Zeitpunktes, an dem der I-Regler $T = 0$ wird:\\
+Wähle Maxima der Oszilationen und fitte mit Gerade\\
+$\Rightarrow$ Man erhält für die erste Messung:  $t_0 \approx 10280 s$\\
+Und für die zweite:  $t_0 \approx 174212 s$
 
 \end{frame}
 \end{document}
