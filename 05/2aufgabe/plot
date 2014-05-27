@@ -37,6 +37,7 @@ plot "2bk5v2.txt" using 1:2 title "Istwert", "2bk5v2.txt" using 1:7 w lines titl
 
 #teil c
 set output "2c1.png"
+set yrange [40:80]
 plot "2c.txt" using 1:2 title "Istwert", "2c.txt" using 1:7 w lines title "Sollwert", "2c.txt" using 1:4 title "I"
 
 set output "2c2.png"
