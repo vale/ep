@@ -1,0 +1,127 @@
+\documentclass[compress,11pt]{beamer}
+%\includeonly{pendel}
+\usetheme{Ilmenau}
+%\usetheme{fau-4-3}
+%\usecolortheme{beaver}
+%\beamertemplatenavigationsymbolsempty
+\usepackage[ngerman]{babel}
+\usepackage{marvosym}
+\usepackage{multimedia}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{esvect}
+%\author{}
+\title{EP Gruppe 8}
+%\setbeamercovered{transparent}
+%\setbeamertemplate{navigation symbols}{}
+%\logo{}
+%\institute{}
+%\date{}
+%\subject{}
+\usepackage{verbatim}
+\begin{document}
+
+
+\section{Aufgabe 1}
+\subsection{Phasenschieber}
+
+\begin{frame}
+Aufzubauen war folgende Schaltung:\\
+\includegraphics[width=.7\textwidth]{schalt/phasenschieber}\\
+
+\end{frame}
+\begin{frame}
+
+\end{frame}
+\begin{frame}
+Es wurden mittels Potentiometer verschiedene Phasen eingestellt und die dazugehörigen Potentiometerwiderstände gemessen:\\
+\includegraphics[width=.7\textwidth]{../oszi/scope_1}\\
+Beispiel für das sich ergebende Bild am Oszilloskop
+
+\end{frame}
+\begin{frame}
+\begin{tabular}{|c|c|}
+\hline
+Phase & zugehöriger $R_{Pot}$ in $k \Omega$  \\
+\hline
+    -176 & 0.0015 ($R_{Pot,min}$) \\
+    45 & 18.1 \\
+    91 & 43.9 \\
+	120 & 78.94 \\
+	
+	
+\hline
+\end{tabular}
+
+\end{frame}
+\begin{frame}
+Herleitung der Theoriekurve zur Phasenverschiebung:\\
+Zusammenhang zwischen den Einzelspannungen:
+\begin{equation}
+U_{2,6} = U_{2,Erde} -  U_{out}
+\end{equation}
+\begin{equation}
+U_{R2} = U_{in} - U_{}
+\end{equation}
+\end{frame}
+
+
+
+\subsection{Komparatoren}
+\begin{frame}
+Schaltplan:\\
+\includegraphics[width=.7\textwidth]{schalt/komparator}
+\end{frame}
+\begin{frame}
+\begin{block}{Funktionsweise der Schaltung}
+\begin{itemize}
+\item Operationsverstärker ohne Gegenkopplung funktioniert als Komparator
+\item ideales Bauteil gibt bei $U_{versorgung} = \pm 7 V$ ein $U_{out} = sign(U_3 - U_2) \cdot U_{versorgung}$ aus
+\item Pin 2 bzw. Pin 3 werden geerdet, $U_{in}$ liegt jeweils am anderen Pin an $\Rightarrow$ Ein Op-Amp. invertiert, der andere nicht
+\end{itemize}
+\end{block}
+Schaltung gibt zwei zueinander inverse, sonst identische Rechtecksspannungen aus
+\end{frame}
+\begin{frame}
+\includegraphics[width=.7\textwidth]{../oszi/scope_5}\\
+Vergleich der von $U_{generator}$, $U_{in}$, $U_{out,1}$ und $U_{out,2}$
+\end{frame}
+
+
+
+
+\subsection{Eingangsverstärker}
+\begin{frame}
+Schaltung:\\
+\includegraphics[width=.7\textwidth]{schalt/eingangs}\\
+Beide Schaltungen verstärken mit Faktor 1, obere normal (da $U_{in}$ auf Pin 3 trifft), untere invertiert (da $U_{in}$ auf invertierenden Pin 2 trifft)
+\end{frame}
+\begin{frame}
+Es ergibt sich am Oszilloskop folgendes Bild:\\
+\includegraphics[width=.7\textwidth]{../oszi/scope_8}
+\end{frame}
+
+\subsection{Analogschalter}
+\begin{frame}
+Bisherige Schaltungen (Phasenverschieber, Komperatoren, Verstärker) werden nun miteinander zum Lock-In-Verstärker zusammengefügt:\\
+%Schaltung
+Benötogtes Bauteil ist ein Analogschalter
+\end{frame}
+\subsubsection{Einschub: Analogschalter}
+\begin{frame}
+Schaltplan des Bauteils:\\
+\includegraphics[width=.7\textwidth]{schalt/analog}
+\end{frame}
+\begin{frame}
+\begin{block}{Funktionsweise eines Analogschalters}
+\begin{itemize}
+\item Technische Realisierung des Schalters durch Feldeffekt-Transistoren
+\item Schalter schließt ($R \approx 10^6 \Omega$), wenn Potential des zugehörigen "Control"-Pins liegt
+
+\end{itemize}
+\end{block}
+\end{frame}
+\end{document}
