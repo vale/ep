@@ -83,7 +83,8 @@ Schaltplan:\\
 \item Pin 2 bzw. Pin 3 werden geerdet, $U_{in}$ liegt jeweils am anderen Pin an $\Rightarrow$ Ein Op-Amp. invertiert, der andere nicht
 \end{itemize}
 \end{block}
-Schaltung gibt zwei zueinander inverse, sonst identische Rechtecksspannungen aus
+Schaltung gibt zwei zueinander inverse, sonst identische Rechtecksspannungen aus\\
+Verstärkung gleich 1, 
 \end{frame}
 \begin{frame}
 \includegraphics[width=.7\textwidth]{../oszi/scope_5}\\
@@ -119,9 +120,17 @@ Schaltplan des Bauteils:\\
 \begin{block}{Funktionsweise eines Analogschalters}
 \begin{itemize}
 \item Technische Realisierung des Schalters durch Feldeffekt-Transistoren
-\item Schalter schließt ($R \approx 10^6 \Omega$), wenn Potential des zugehörigen "Control"-Pins liegt
-
+\item Schalter schließt ($R \approx 10^6 \Omega$), wenn Potential des zugehörigen "Control"-Pins gleich $V_{DD}$ ist
+\item Schalter ist offen, wenn Pin-Potential gleich V_{SS}
 \end{itemize}
 \end{block}
 \end{frame}
+\begin{frame}
+Vervollständigt wird Schaltung noch mit Tiefpass:\\
+Grenzfrequenz:
+\begin{equation}
+f = \frac{1}{2 \cdot \pi \cdot F \cdot R} \approx 1.59 Hz
+\end{equation}
+\end{frame}
+
 \end{document}
