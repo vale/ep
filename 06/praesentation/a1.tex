@@ -25,7 +25,7 @@
 \begin{document}
 
 
-\section{Aufgabe 1}
+\section{Aufgabe 1: Komponenten eines Lock-In-Verstärkers}
 \subsection{Phasenschieber}
 
 \begin{frame}
@@ -34,7 +34,13 @@ Aufzubauen war folgende Schaltung:\\
 
 \end{frame}
 \begin{frame}
-
+\begin{block}{Funktionsweise der Schaltung}
+\begin{itemize}
+\item Op-Amp verstärkt mit $|V| = 1$
+\item Poti und Kondensator wirken als Tiefpass, der die Phase verschiebt
+\end{itemize}
+\end{block}
+Phasenschieber und alle weiteren Bautelie Lock-Ins wurden mit einem sinusförmigen Teststrom von $U_{pp} = 1 V$ und $f = 777 Hz$ betrieben
 \end{frame}
 \begin{frame}
 Es wurden mittels Potentiometer verschiedene Phasen eingestellt und die dazugehörigen Potentiometerwiderstände gemessen:\\
@@ -59,13 +65,24 @@ Phase & zugehöriger $R_{Pot}$ in $k \Omega$  \\
 \end{frame}
 \begin{frame}
 Herleitung der Theoriekurve zur Phasenverschiebung:\\
-Zusammenhang zwischen den Einzelspannungen:
+Es ergibt sich für die Spannungen an den Eingängen:
 \begin{equation}
-U_{2,6} = U_{2,Erde} -  U_{out}
+U_{+} = U_{in} \cdot \frac{Z_{C_1}}{Z_{C_1} + R_{pot}}
 \end{equation}
 \begin{equation}
-U_{R2} = U_{in} - U_{}
+U_{-} = U_{in} \frac{R_2}{R_1 + R_2} \cdot (U_{out} - U_{in})
 \end{equation}
+Benutze nun goldene Regel:
+\begin{equation}
+\Rightarrow U_{out} = U_{in} \cdot \frac{Z_{C1} - R_{pot}}{Z_{C} + R_{pot}}
+\end{equation}
+Nach Betragsetzung $|U_{out}| = |U_{in}|$ ergibt sich:
+\begin{equation}
+\phi = \arctan (\frac{4 \cdot \pi \cdot f \cdot R_{pot} \cdot C }{1 - (2 \cdot \pi \cdot f \cdot R_{pot} \cdot C)^2})
+\end{equation}
+\end{frame}
+\begin{frame}
+plot kaputt
 \end{frame}
 
 
@@ -121,7 +138,7 @@ Schaltplan des Bauteils:\\
 \begin{itemize}
 \item Technische Realisierung des Schalters durch Feldeffekt-Transistoren
 \item Schalter schließt ($R \approx 10^6 \Omega$), wenn Potential des zugehörigen "Control"-Pins gleich $V_{DD}$ ist
-\item Schalter ist offen, wenn Pin-Potential gleich V_{SS}
+\item Schalter ist offen, wenn Pin-Potential gleich $V_{SS}$
 \end{itemize}
 \end{block}
 \end{frame}
@@ -131,6 +148,9 @@ Grenzfrequenz:
 \begin{equation}
 f = \frac{1}{2 \cdot \pi \cdot F \cdot R} \approx 1.59 Hz
 \end{equation}
+\begin{block}{Fazit}
+Alle Komponenten des Lock-In-Verstärkers funktionieren wie erwartet
+\end{block}
 \end{frame}
 
 \end{document}
