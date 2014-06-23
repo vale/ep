@@ -1,0 +1,5 @@
+set term png
+set xlabel "t in n*(1/f)"
+
+set output "1khz.png"
+

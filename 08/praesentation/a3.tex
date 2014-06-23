@@ -77,5 +77,30 @@ Der erste Wert in der Tabelle ist möglicherweise fehlerhaft, die anderen drei W
 \begin{frame}
 \includegraphics[width=.5\textwidth]{../plots/blub}
 \includegraphics[width=.5\textwidth]{../plots/blub2}\\
+Vergleich der gefitteten Parabeln mit und ohne den Messpunkt bei $U = 1 V$
+\end{frame}
+\begin{frame}
+\begin{block}
+Nach Vorlesung ergibt sich: 
+\begin{equation}
+N_{out} (U_{in}) = (N_{max} + 1)\frac{U_{in}}{U_{ref}}
+\end{equation}
+Es ergibt sich z.b. für $U_{in} = 3.1 V$: $N \approx 158$, aber für $N_{max} (1 V) \approx 51$ $\Rightarrow$ widerspricht vorheriger Annahme 
+\end{block}
+\end{frame}
+
+
+
+
+\begin{frame}
+Im Datenblatt ergibt sich für die Abtastrate: 
+\begin{equation}
+f_{CLK} \approx \frac{1}{1.1 \cdot R \cdot C} 
+\end{equation}
+\end{frame}
+\begin{frame}
+Tastrate kann auch experimentell bestimmt werden (Pin 5):\\
+\includegraphics[width=.7\textwidth]{../vales_zeug/scope_125}\\
+$\Rightarrow f_{CLK} \approx 6 kHz$
 \end{frame}
 \end{document}
