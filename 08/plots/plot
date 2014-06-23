@@ -6,3 +6,11 @@ set output "r2r.png"
 f(x)=a*x+b
 fit f(x) "r2r.dat" via a, b
 plot "r2r.dat" , f(x)
+
+set output "blub2.png"
+set xlabel "U_in in V"
+set ylabel "N"
+
+k(x)=d*x**2 +g*x+h
+fit k(x) "./a3_z(u).dat" via d, g, h
+plot "./a3_z(u).dat" w linespoints, k(x) 
