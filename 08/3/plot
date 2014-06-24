@@ -2,4 +2,15 @@ set term png
 set xlabel "t in n*(1/f)"
 
 set output "1khz.png"
+plot "1khz.txt" using 1:4
+
+#set output "2khz.png"
+#plot "2khz.txt" using 1:4
+
+set output "3khz.png"
+plot "3khz.txt" using 1:4
+set output "4khz.png"
+plot "4khz.txt" using 1:4
+
+
 
