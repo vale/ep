@@ -63,7 +63,7 @@ Schaltung:\\
 
 \end{frame}
 \begin{frame}
-\begin{block}
+\begin{block}{Funktionsweise}
 \begin{itemize}
 \item Dem RS-Flip:Flop werden nun noch zwei NAND-Gatter vorrangestellt, die über das Clock-Signal verbunden sind
 \item Solange $C = 0$ $\Rightarrow$ fester Anfangszustand, der nicht durch S und R beeinflusst wird, da NAND-Gatter $1$ ausgibt, sobald eines der Signale $0$ ist
@@ -89,7 +89,7 @@ Schaltung:\\
 
 \end{frame}
 \begin{frame}
-\begin{block}
+\begin{block}{s}
 \begin{itemize}
 \item 
 \end{itemize}
@@ -109,6 +109,42 @@ Schaltung:\\
 
 \end{frame}
 \begin{frame}
-
+\begin{tabular}{|c|c|c|c||c|c|c|}
+\hline 
+$A_0$ & $A_1$ & $A_2$ & $A_3$ & $Y_0$ & $Y_1$ & $C_2$ \\ 
+\hline 
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+\hline 
+1 & 0 & 0 & 0 & 1 & 0 & 0 \\ 
+\hline 
+1 & 1 & 0 & 0 & 1 & 1 & 0 \\ 
+\hline 
+1 & 1 & 1 & 0 & 0 & 0 & 1 \\ 
+\hline 
+1 & 1 & 1 & 1 & 0 & 1 & 1 \\ 
+\hline 
+0 & 1 & 1 & 1 & 1 & 0 & 1 \\ 
+\hline 
+0 & 0 & 1 & 1 & 1 & 1 & 0 \\ 
+\hline 
+0 & 0 & 0 & 1 & 0 & 1 & 0 \\ 
+\hline 
+0 & 1 & 0 & 0 & 0 & 1 & 0 \\ 
+\hline 
+0 & 0 & 1 & 0 & 1 & 0 & 0 \\ 
+\hline 
+0 & 1 & 1 & 0 & 1 & 1 & 0 \\ 
+\hline 
+0 & 1 & 0 & 1 & 0 & 0 & 1 \\ 
+\hline 
+1 & 0 & 1 & 0 & 0 & 1 & 0 \\ 
+\hline 
+1 & 1 & 0 & 1 & 1 & 0 & 1 \\ 
+\hline 
+1 & 0 & 0 & 1 & 1 & 1 & 0 \\ 
+\hline 
+1 & 0 & 1 & 1 & 0 & 0 & 1 \\ 
+\hline 
+\end{tabular}
 \end{frame}
 \end{document}
