@@ -26,16 +26,11 @@
 \section{Sequentielle Logik}
 \subsection{RS-Flip-Flop}
 \begin{frame}
-Schaltung:
-%\includegraphics[scale=0.7]{•}
-
-
-
-
-
+\begin{block}{Schaltung}
+\includegraphics[scale=0.7]{rs}
+\end{block}
 \end{frame}
 \begin{frame}
-
 \begin{block}{Aufbau und Funktion}
 \begin{itemize}
 \item Zusammengesetzt aus zwei gekoppelten NAND-Gattern
@@ -45,10 +40,21 @@ Schaltung:
 \end{itemize}
 \end{block}
 \end{frame}
-
 \begin{frame}
 Wahrheitstafel:\\
+\begin{tabular}{|c|c||c|c|}
+\hline 
+$\overline{S}$ & $\overline{R}$ & $Q$ & $\overline{Q}$ \\ 
+\hline 
+0 & 0 & (1) & (1) \\ 
 
+0 & 1 & 1 & 0 \\ 
+ 
+1 & 0 & 0 & 1 \\ 
+ 
+1 & 1 & $Q_{n-1}$ & $\overline{Q_{n-1}}$ \\ 
+\hline 
+\end{tabular} 
 
 
 
@@ -56,10 +62,10 @@ Wahrheitstafel:\\
 \end{frame}
 \subsection{Taktgesteuerter RS}
 \begin{frame}
-Schaltung:\\
 
-
-
+\begin{block}{Schaltung}
+\includegraphics[scale=0.7]{taktrs}
+\end{block}
 
 \end{frame}
 \begin{frame}
@@ -67,84 +73,145 @@ Schaltung:\\
 \begin{itemize}
 \item Dem RS-Flip:Flop werden nun noch zwei NAND-Gatter vorrangestellt, die über das Clock-Signal verbunden sind
 \item Solange $C = 0$ $\Rightarrow$ fester Anfangszustand, der nicht durch S und R beeinflusst wird, da NAND-Gatter $1$ ausgibt, sobald eines der Signale $0$ ist
-
+\item Schaltung ist "flankengesteuert", also gesetzte $S$ und $R$ werden erst übernommen, wenn $C$ eingeschaltet wird
 \end{itemize}
 \end{block}
 \end{frame}
 \begin{frame}
+\begin{block}{Verlauf der Schaltvorgänge}
+\includegraphics[scale=1.3]{trs}
+\end{block}
 
 \end{frame}
-
-
-
-
-
 \subsection{D-Latch}
 
 \begin{frame}
-Schaltung:\\
+\begin{block}{Schaltung}
+\includegraphics[scale=1]{dlatch1}
 
-
-
+\end{block}
 
 \end{frame}
+\begin{frame}\begin{tabular}{|c|c||c|}
+\hline 
+$\overline{D}$ & $C$ & $\overline{S}$ \\ 
+\hline 
+1 & 0 & 1 \\ 
+
+1 & 1 & 1 \\ 
+
+0 & 0 & 1 \\ 
+
+0 & 1 & 0 \\ 
+\hline
+\end{tabular} \\
+Bis auf den irrelevanten Fall $C = 0$ (es findet keine Veränderung des Zustandes statt) sind $\overline{D}$ und $\overline{S}$ identisch
+\end{frame}
 \begin{frame}
-\begin{block}{s}
+\begin{block}{Schaltung kann somit vereinfacht werden}
+\includegraphics[scale=0.7]{dlatcheinfach}
+\end{block}
+\end{frame}
+\begin{frame}
+\begin{block}{Funktionsweise}
 \begin{itemize}
-\item 
+\item $R$ zu $S$ negiert, daher existiert kein unbestimmter Zustand
+\item Schaltung nicht flanken- sondern zustandsgesteuert: sobald $C = 1$, lassen sich Zustände setzen bzw. überschreiben
 \end{itemize}
 \end{block}
 \end{frame}
+\begin{frame}
+\begin{block}{Verlauf der Schaltvorgänge}
+\includegraphics[scale=1.3]{dlatch}
+\end{block}
+\end{frame}
+\begin{frame}
+\begin{block}{Wahrheitstafel}
+\begin{tabular}{|c|c|c|}
+\hline 
+$D$ & $C$ & $Q$ \\ 
+\hline 
+x & 0 & $Q_{n-1}$ \\ 
+\hline 
+0 & 1 & 0 \\ 
+\hline 
+1 & 1 & 1 \\ 
+\hline 
+\end{tabular} 
 
+\end{block}
+\end{frame}
+\subsection{Flankengesteuertes RS-Flip-Flop}
+\begin{frame}
+\begin{block}{Schaltung}
+\includegraphics[scale=0.7]{flanke}
+\end{block}
+\end{frame}
+\begin{frame}
+\begin{block}{Funktionsweise}
+\begin{itemize}
+\item Bei $C$ konstant wird der zuletzt gesetzte Wert von $Q$ rückgegeben
+\item Sobald steigende Flanke auf $C$, wird $Q$ = $D$ gesetzt
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}
+\begin{block}{Verlauf der Schaltvorgänge}
+\includegraphics[scale=1]{triggerrs}
+\end{block}
+\end{frame}
+\begin{frame}
+\begin{block}{Wahrheitstafel}
+\begin{tabular}{|c|c|c|}
+\hline 
+$D$ & $C$ & $Q$ \\ 
+\hline 
+x & 0 & $Q_{n-1}$ \\ 
 
+n & Steigende Flanke & n \\ 
+ 
+x & 1 & $Q_{n-1}$ \\ 
+\hline 
+\end{tabular} 
+\end{block}
+\end{frame}
 
 
 \section{Zähler}
 \begin{frame}
-Schaltung:\\
-
-
-
-
-
+\begin{block}{Schaltung}
+\includegraphics[scale=0.7]{zahler}
+\end{block}
+Es kann so Addition der Flankensignale in Binärform realisiert werden
 \end{frame}
 \begin{frame}
-\begin{tabular}{|c|c|c|c||c|c|c|}
-\hline 
-$A_0$ & $A_1$ & $A_2$ & $A_3$ & $Y_0$ & $Y_1$ & $C_2$ \\ 
-\hline 
-0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
-\hline 
-1 & 0 & 0 & 0 & 1 & 0 & 0 \\ 
-\hline 
-1 & 1 & 0 & 0 & 1 & 1 & 0 \\ 
-\hline 
-1 & 1 & 1 & 0 & 0 & 0 & 1 \\ 
-\hline 
-1 & 1 & 1 & 1 & 0 & 1 & 1 \\ 
-\hline 
-0 & 1 & 1 & 1 & 1 & 0 & 1 \\ 
-\hline 
-0 & 0 & 1 & 1 & 1 & 1 & 0 \\ 
-\hline 
-0 & 0 & 0 & 1 & 0 & 1 & 0 \\ 
-\hline 
-0 & 1 & 0 & 0 & 0 & 1 & 0 \\ 
-\hline 
-0 & 0 & 1 & 0 & 1 & 0 & 0 \\ 
-\hline 
-0 & 1 & 1 & 0 & 1 & 1 & 0 \\ 
-\hline 
-0 & 1 & 0 & 1 & 0 & 0 & 1 \\ 
-\hline 
-1 & 0 & 1 & 0 & 0 & 1 & 0 \\ 
-\hline 
-1 & 1 & 0 & 1 & 1 & 0 & 1 \\ 
-\hline 
-1 & 0 & 0 & 1 & 1 & 1 & 0 \\ 
-\hline 
-1 & 0 & 1 & 1 & 0 & 0 & 1 \\ 
-\hline 
-\end{tabular}
+
+Durchführung mit 2 * 2 flankengetriggerten D-Flip-Flops in IC-Form
+
+\begin{block}{Funktionsweise}
+\begin{itemize}
+\item $D$ immer mit $Q$ verbunden, also wechselt $Q$ bei jeder Flanke den Wert
+\item Da Flip-Flop flankengetriggert, nur Reaktion auf einfaches Betätigen des Schalters
+\item Bei Setzen von $Q$ auf 0 wird $\overline{Q}$ auf 1 gesetzt und die anderen Bits erhalten ein Schaltsignal
+\end{itemize}
+\end{block}
 \end{frame}
+\begin{frame}
+\begin{block}{Eigenschaften}
+\begin{itemize}
+\item Speicher = 4 Bit, somit ist maximale darstellbare Zahl 15
+\item Wenn Wert des Zählers gleich 15, sind alle $Q$ = 1, bei einer weiteren Flanke werden alle $Q$ wieder auf 0 gesetztc $\Rightarrow$ kein Übertrag möglich
+\end{itemize}
+\end{block}
+\end{frame}
+
+\section{binary coded decimal und 7-­Segment­-Anzeige}
+\begin{frame}
+Ziel: Darstellung der Binärzahl des Zählers als gewohnte Dezimalzahl, Realisierung über speziellen IC sowie kompatibler Anzeige
+\begin{block}{Schaltung}
+\includegraphics[scale=0.7]{a5sch}
+
+\end{block}
+\end{frame}
+
 \end{document}
