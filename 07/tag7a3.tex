@@ -7,7 +7,7 @@
 \usepackage[ngerman]{babel}
 \usepackage{marvosym}
 \usepackage{multimedia}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -180,7 +180,7 @@ x & 1 & $Q_{n-1}$ \\
 \section{Zähler}
 \begin{frame}
 \begin{block}{Schaltung}
-\includegraphics[scale=0.7]{zahler}
+\includegraphics[scale=0.6]{zahler}
 \end{block}
 Es kann so Addition der Flankensignale in Binärform realisiert werden
 \end{frame}
@@ -206,6 +206,7 @@ Durchführung mit 2 * 2 flankengetriggerten D-Flip-Flops in IC-Form
 \end{frame}
 
 \section{binary coded decimal und 7-­Segment­-Anzeige}
+\subsection{BCD}
 \begin{frame}
 Ziel: Darstellung der Binärzahl des Zählers als gewohnte Dezimalzahl, Realisierung über speziellen IC sowie kompatibler Anzeige
 \begin{block}{Schaltung}
@@ -213,5 +214,36 @@ Ziel: Darstellung der Binärzahl des Zählers als gewohnte Dezimalzahl, Realisie
 
 \end{block}
 \end{frame}
+\begin{frame}
+\begin{block}{Wahrheitstafel des CMOS 4511}
+\includegraphics[scale=0.7]{a5tafel}
 
+\end{block}
+\end{frame}
+\begin{frame}
+\begin{block}{Funktionsweise}
+\begin{itemize}
+
+\item CMOS 4511 wandelt Binärzahl in BCD-Code, um mit 7-Segment-Anzeige kommunizieren zu können, die die Zahl in Dezimal-Darstellung anzeigen kann
+\item CMOS nur für Verwendung mit einstelliger Anzeige konstruiert/geeignet, denn sobald $(1001)_2 = 9_{10}$, also die größte einsstellige Dezimalzahl überschritten wird, gibt Chip nur noch Signale $a \dots f = 0$ zurück $\Rightarrow$ keine Anzeige
+\end{itemize}
+\end{block}
+\end{frame}
+\subsection{Würfel}
+\begin{frame}
+Mit Frequenzgenerator, der Rechtecksspannung ausgibt, kann nun das Zählen automatisiert werden, also es werden alle einkommenden Flanken gezählt, wobei sich der Zähler nach 15 Signalen wieder zurücksetzt\\
+Dies lässt sich auch nutzen, um bei hohen Signalfrequenzen mit der Schaltung Zufallszahlen zu erzeugen.\\
+Dem Zähler aus Aufgabe 4, der über die $Q_i$ mit der Schaltung aus Aufgabe 5 verbubńden ist, wird noch ein Schalter vorrangestellt.\\
+Sobald dieser gedrückt, erreichen Pulse die Schaltung, und da die Anzahl dieser bei hohen Frequenzen nicht mehr abgeschätzt werden können, ist die Anzeige zufällig.
+\end{frame}
+\begin{frame}
+Problem: Noch zählt der Zähler nicht dezimal, sondern bis 15 wobei bei 11 bis 15 die Anzeige inaktiv ist 
+\begin{block}{Behebung}
+\begin{itemize}
+\item Zähler muss beim erreichen der Zahl $(10)_{10}$ = $(1001)_2$ wieder auf den Wert 0 gesetzt werden
+\item Wird realisiert, indem die Pegel $A$ und $D$ mit AND-Gatter auf die Reset-Pins der mit $A$ und $D$ verbundenen Flip-Flops verbunden werden 
+\end{itemize}
+\end{block}
+Nun funktioniert Schaltung wie erwartet
+\end{frame}
 \end{document}
